@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+#keycloak server
+keycloak-16.1.0/
+
 # BlueJ files
 *.ctxt
 
