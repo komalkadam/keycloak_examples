@@ -3,7 +3,8 @@
  */
 package com.komal.keycloak.example.ResourceServer.controller;
 
-import org.springframework.security.access.annotation.Secured;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -23,9 +24,13 @@ import com.komal.keycloak.example.ResourceServer.model.UserDTO;
 @RestController
 @RequestMapping("/users")
 public class UserController {
+	
+	@Autowired
+	Environment env;
+	
 	@GetMapping("/status/check")
 	public String status() {
-		return "User controller in Resource server is up and running";
+		return "User controller in Resource server is up and running on port " + env.getProperty("local.server.port");
 	}
 	
 	//@Secured("ROLE_developer")
