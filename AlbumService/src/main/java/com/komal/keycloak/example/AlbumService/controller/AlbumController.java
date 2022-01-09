@@ -34,14 +34,14 @@ public class AlbumController {
 		AlbumDto album1 = new AlbumDto();
 		album1.setId("1");
 		album1.setUserid("1");
-		album1.setName("Album 1");
+		album1.setName("Album one from Album Service");
 		album1.setDescription("Sample Album 1");
 		album1.setUrl("Random URL for Album 1");
 		
 		AlbumDto album2 = new AlbumDto();
 		album2.setId("2");
 		album2.setUserid("2");
-		album2.setName("Album 2");
+		album2.setName("Album two from Album Service");
 		album2.setDescription("Sample Album 2");
 		album2.setUrl("Random URL for Album 2");
 		return Arrays.asList(album1, album2); 
